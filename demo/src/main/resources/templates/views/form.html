@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Form of new Good</title>
+</head>
+<body>
+    <form th:object="${create}" th:action="@{/create}"
+          method="post" enctype="multipart/form-data">
+        <div><label th:for="*{name}">Name of good</label>
+        <input th:field="*{name}"/>
+        </div>
+        <label th:for="*{price}">Price</label>
+        <input th:field="*{price}"/>
+        <input type="submit"/>
+
+    </form>
+</body>
+</html>
