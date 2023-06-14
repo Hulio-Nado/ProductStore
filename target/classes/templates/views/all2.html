@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+There are All our goods
+
+<ul th:each="item:${all}">
+  <li>
+    <p th:text="${item.name}"></p>
+  </li>
+</ul>
+</body>
+</html>
